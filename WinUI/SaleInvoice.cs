@@ -250,8 +250,9 @@ namespace WinUI
             int idInvoice = cmdInvoiceID.SelectedIndex + 1;
             int idpay = cmbPaymentType.SelectedIndex + 1;
             string descripcion = txtDescription.Text;
+            decimal amount = Convert.ToDecimal(label13.Text);
 
-            classLogical.SaveInvoice(idInvoice, idpay, descripcion);
+            classLogical.SaveInvoice(idInvoice, idpay, descripcion, amount);
 
 
             if (decimal.TryParse(textBox3.Text, out decimal monto))
@@ -350,6 +351,17 @@ namespace WinUI
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnAnularFac_Click(object sender, EventArgs e)
+        {
+            FormCancelInvoice form = new FormCancelInvoice();
+            form.Show();
+        }
+
+        private void cmdInvoiceID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     } 
 

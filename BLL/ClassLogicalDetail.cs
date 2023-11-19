@@ -23,9 +23,9 @@ namespace BLL
             }
         }//fin private
 
-        public void SaveInvoice(int idInvoice, int idTipopago, string description)
+        public void SaveInvoice(int idInvoice, int idTipopago, string description, decimal amount)
         {
-            invoiceTable.InsertQueryDetail(idInvoice, idTipopago, description);
+            invoiceTable.InsertQueryDetail(idInvoice, idTipopago, description, amount);
         }
 
         

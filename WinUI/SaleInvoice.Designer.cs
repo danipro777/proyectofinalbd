@@ -62,6 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnVender = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAnularFac = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -224,6 +225,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnAnularFac);
             this.groupBox3.Controls.Add(this.dataGridView2);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.label15);
@@ -237,7 +239,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(708, 202);
+            this.groupBox3.Size = new System.Drawing.Size(780, 202);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detail";
@@ -248,7 +250,7 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoPago,
             this.Montos});
-            this.dataGridView2.Location = new System.Drawing.Point(376, 24);
+            this.dataGridView2.Location = new System.Drawing.Point(492, 24);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(230, 150);
             this.dataGridView2.TabIndex = 8;
@@ -304,6 +306,7 @@
             this.cmdInvoiceID.Name = "cmdInvoiceID";
             this.cmdInvoiceID.Size = new System.Drawing.Size(207, 21);
             this.cmdInvoiceID.TabIndex = 3;
+            this.cmdInvoiceID.SelectedIndexChanged += new System.EventHandler(this.cmdInvoiceID_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -424,6 +427,18 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnAnularFac
+            // 
+            this.btnAnularFac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnAnularFac.Location = new System.Drawing.Point(337, 24);
+            this.btnAnularFac.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnularFac.Name = "btnAnularFac";
+            this.btnAnularFac.Size = new System.Drawing.Size(134, 31);
+            this.btnAnularFac.TabIndex = 16;
+            this.btnAnularFac.Text = "Anulacion de facturas";
+            this.btnAnularFac.UseVisualStyleBackColor = false;
+            this.btnAnularFac.Click += new System.EventHandler(this.btnAnularFac_Click);
+            // 
             // SaleInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,5 +507,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Montos;
+        private System.Windows.Forms.Button btnAnularFac;
     }
 }

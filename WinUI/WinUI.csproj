@@ -106,6 +106,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCancelInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCancelInvoice.Designer.cs">
+      <DependentUpon>FormCancelInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelInvoice.resx">
+      <DependentUpon>FormCancelInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCashier.resx">
       <DependentUpon>FormCashier.cs</DependentUpon>
