@@ -4473,6 +4473,8 @@ namespace DAL {
             
             private global::System.Data.DataColumn columnTotalAmount;
             
+            private global::System.Data.DataColumn columnTypePay;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SalesDataTable() {
@@ -4548,6 +4550,14 @@ namespace DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TypePayColumn {
+                get {
+                    return this.columnTypePay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4583,14 +4593,15 @@ namespace DAL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SalesRow AddSalesRow(System.DateTime Sale_Date, InvoiceRow parentInvoiceRowByFK_Sales_Invoice, int ID_Inventory, decimal TotalAmount) {
+            public SalesRow AddSalesRow(System.DateTime Sale_Date, InvoiceRow parentInvoiceRowByFK_Sales_Invoice, int ID_Inventory, decimal TotalAmount, int TypePay) {
                 SalesRow rowSalesRow = ((SalesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Sale_Date,
                         null,
                         ID_Inventory,
-                        TotalAmount};
+                        TotalAmount,
+                        TypePay};
                 if ((parentInvoiceRowByFK_Sales_Invoice != null)) {
                     columnValuesArray[2] = parentInvoiceRowByFK_Sales_Invoice[0];
                 }
@@ -4628,6 +4639,7 @@ namespace DAL {
                 this.columnID_Invoice = base.Columns["ID_Invoice"];
                 this.columnID_Inventory = base.Columns["ID_Inventory"];
                 this.columnTotalAmount = base.Columns["TotalAmount"];
+                this.columnTypePay = base.Columns["TypePay"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4643,6 +4655,8 @@ namespace DAL {
                 base.Columns.Add(this.columnID_Inventory);
                 this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalAmount);
+                this.columnTypePay = new global::System.Data.DataColumn("TypePay", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTypePay);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Sale}, true));
                 this.columnID_Sale.AutoIncrement = true;
@@ -4655,6 +4669,7 @@ namespace DAL {
                 this.columnID_Invoice.AllowDBNull = false;
                 this.columnID_Inventory.AllowDBNull = false;
                 this.columnTotalAmount.AllowDBNull = false;
+                this.columnTypePay.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6194,6 +6209,17 @@ namespace DAL {
                 }
                 set {
                     this[this.tableSales.TotalAmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int TypePay {
+                get {
+                    return ((int)(this[this.tableSales.TypePayColumn]));
+                }
+                set {
+                    this[this.tableSales.TypePayColumn] = value;
                 }
             }
             
@@ -10227,6 +10253,7 @@ SELECT ID_Invoice, SeriesLetter, ID_Customer, ID_Employee FROM Invoice WHERE (ID
             tableMapping.ColumnMappings.Add("ID_Invoice", "ID_Invoice");
             tableMapping.ColumnMappings.Add("ID_Inventory", "ID_Inventory");
             tableMapping.ColumnMappings.Add("TotalAmount", "TotalAmount");
+            tableMapping.ColumnMappings.Add("TypePay", "TypePay");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10243,7 +10270,8 @@ SELECT ID_Invoice, SeriesLetter, ID_Customer, ID_Employee FROM Invoice WHERE (ID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Sales.*\r\nFROM            Sales";
+            this._commandCollection[0].CommandText = "SELECT        ID_Sale, Sale_Date, ID_Invoice, ID_Inventory, TotalAmount, TypePay\r" +
+                "\nFROM            Sales";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -10259,6 +10287,7 @@ SELECT ID_Invoice, SeriesLetter, ID_Customer, ID_Employee FROM Invoice WHERE (ID
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sale_Date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Invoice", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@payid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10322,7 +10351,7 @@ SELECT ID_Invoice, SeriesLetter, ID_Customer, ID_Employee FROM Invoice WHERE (ID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object InsertarVenta(global::System.Nullable<global::System.DateTime> Sale_Date, global::System.Nullable<int> ID_Invoice, global::System.Nullable<int> Product_ID) {
+        public virtual object InsertarVenta(global::System.Nullable<global::System.DateTime> Sale_Date, global::System.Nullable<int> ID_Invoice, global::System.Nullable<int> Product_ID, global::System.Nullable<int> payid) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Sale_Date.HasValue == true)) {
                 command.Parameters[1].Value = ((System.DateTime)(Sale_Date.Value));
@@ -10341,6 +10370,12 @@ SELECT ID_Invoice, SeriesLetter, ID_Customer, ID_Employee FROM Invoice WHERE (ID
             }
             else {
                 command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((payid.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(payid.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

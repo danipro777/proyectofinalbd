@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAnularFac = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.TipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Montos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +63,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnVender = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnAnularFac = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -243,6 +244,18 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detail";
+            // 
+            // btnAnularFac
+            // 
+            this.btnAnularFac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnAnularFac.Location = new System.Drawing.Point(337, 24);
+            this.btnAnularFac.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnularFac.Name = "btnAnularFac";
+            this.btnAnularFac.Size = new System.Drawing.Size(134, 31);
+            this.btnAnularFac.TabIndex = 16;
+            this.btnAnularFac.Text = "Anulacion de facturas";
+            this.btnAnularFac.UseVisualStyleBackColor = false;
+            this.btnAnularFac.Click += new System.EventHandler(this.btnAnularFac_Click);
             // 
             // dataGridView2
             // 
@@ -427,17 +440,15 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnAnularFac
+            // button1
             // 
-            this.btnAnularFac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnAnularFac.Location = new System.Drawing.Point(337, 24);
-            this.btnAnularFac.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAnularFac.Name = "btnAnularFac";
-            this.btnAnularFac.Size = new System.Drawing.Size(134, 31);
-            this.btnAnularFac.TabIndex = 16;
-            this.btnAnularFac.Text = "Anulacion de facturas";
-            this.btnAnularFac.UseVisualStyleBackColor = false;
-            this.btnAnularFac.Click += new System.EventHandler(this.btnAnularFac_Click);
+            this.button1.Location = new System.Drawing.Point(122, 364);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // SaleInvoice
             // 
@@ -445,6 +456,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(801, 843);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.label13);
@@ -508,5 +520,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Montos;
         private System.Windows.Forms.Button btnAnularFac;
+        private System.Windows.Forms.Button button1;
     }
 }

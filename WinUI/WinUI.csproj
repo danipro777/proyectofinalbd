@@ -186,10 +186,75 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\ReportAmount.rdlc" />
     <EmbeddedResource Include="SaleInvoice.resx">
       <DependentUpon>SaleInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DAL.CategoryProductsClass.datasource" />
+    <None Include="Properties\DataSources\DAL.ClassLogin.datasource" />
+    <None Include="Properties\DataSources\DAL.CustomerClass.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CategoryProductDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CategoryProductRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CategoryProductRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CategoryProductRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomersDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomersRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomersRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomersRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomerTypeDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomerTypeRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomerTypeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+CustomerTypeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Employees1DataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Employees1Row.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Employees1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Employees1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+EmployeesDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+EmployeesRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+EmployeesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+EmployeesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceDetailDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceDetailRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceDetailRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceDetailRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+InvoiceRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+PaymentTypeDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+PaymentTypeRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+PaymentTypeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+PaymentTypeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Products1DataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Products1Row.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Products1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+Products1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProductsDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProductsRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProductsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProductsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProviderDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProviderRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProviderRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+ProviderRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+RolsDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+RolsRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+RolsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+RolsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+SalesDataTable.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+SalesRow.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+SalesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1+SalesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.InvoiceDetailTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.SalesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.EmployeeClass.datasource" />
+    <None Include="Properties\DataSources\DAL.InvoiceClass.datasource" />
+    <None Include="Properties\DataSources\DAL.InvoiceDetailClass.datasource" />
+    <None Include="Properties\DataSources\DAL.PaymentClass.datasource" />
+    <None Include="Properties\DataSources\DAL.ProductClass.datasource" />
+    <None Include="Properties\DataSources\DAL.RolsClass.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

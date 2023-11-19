@@ -203,10 +203,10 @@ namespace WinUI
             textBox3.Enabled = true;
             ClassLogicalSales classLogical = new ClassLogicalSales();
             DateTime fecha = Convert.ToDateTime(dateTimePicker1.Text);
-            int idInvoice = cmbInvoice.SelectedIndex + 1;
+            int IdInvoice = cmbInvoice.SelectedIndex + 1;
             int idProduct = cmbProduct.SelectedIndex + 1;
-
-            classLogical.SaveSale(fecha, idInvoice, idProduct);
+            int typepay = cmbPaymentType.SelectedIndex + 1;
+            classLogical.SaveSale(fecha, IdInvoice, idProduct, typepay);
             // Obtén el texto seleccionado del ComboBox
             string texto = cmbProduct.SelectedItem.ToString();
 
@@ -216,7 +216,9 @@ namespace WinUI
 
 
             //TOTAL
-            int idFactura = cmbInvoice.SelectedIndex + 1; // Aquí debes obtener el ID de factura que desees consultar
+            int idFactura = cmbInvoice.SelectedIndex + 1;
+            Console.WriteLine("ID de factura seleccionado: " + idFactura);
+            // Aquí debes obtener el ID de factura que desees consultar
 
             ClassLogicalSales total = new ClassLogicalSales();
             DataTable resultadoProcedimiento = total.EjecutarProcedimientoAlmacenado(idFactura);
@@ -246,13 +248,15 @@ namespace WinUI
         private void btnDetail_Click(object sender, EventArgs e)
         {
             txtDescription.Enabled = false;
-            ClassLogicalDetail classLogical = new ClassLogicalDetail();
+        
+
+            ClassLogicalDetail classLogicals = new ClassLogicalDetail();
             int idInvoice = cmdInvoiceID.SelectedIndex + 1;
             int idpay = cmbPaymentType.SelectedIndex + 1;
             string descripcion = txtDescription.Text;
             decimal amount = Convert.ToDecimal(label13.Text);
 
-            classLogical.SaveInvoice(idInvoice, idpay, descripcion, amount);
+            classLogicals.SaveInvoice(idInvoice, idpay, descripcion, amount);
 
 
             if (decimal.TryParse(textBox3.Text, out decimal monto))
@@ -362,6 +366,10 @@ namespace WinUI
         private void cmdInvoiceID_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
         }
     } 
 

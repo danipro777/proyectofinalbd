@@ -38,9 +38,9 @@ namespace BLL
             return PRODUCTS.GetDataProductList();
         }
 
-        public void SaveSale(DateTime fecha, int idFactura, int idProducto)
+        public void SaveSale(DateTime fecha, int idFactura, int idProducto, int typepay)
         {
-            invoiceSales.InsertarVenta(fecha, idFactura, idProducto);
+            invoiceSales.InsertarVenta(fecha, idFactura, idProducto, typepay);
         }
 
         //sumar
