@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
     </Reference>
@@ -132,12 +150,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAmount.Designer.cs">
+      <DependentUpon>ReportAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProducts.Designer.cs">
+      <DependentUpon>ReportProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaleInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SaleInvoice.Designer.cs">
       <DependentUpon>SaleInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="CRUDCategoryProducts.resx">
       <DependentUpon>CRUDCategoryProducts.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,7 +217,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportAmount.resx">
+      <DependentUpon>ReportAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProducts.resx">
+      <DependentUpon>ReportProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportAmount.rdlc" />
+    <EmbeddedResource Include="Reports\ReportMasVendidos.rdlc" />
     <EmbeddedResource Include="SaleInvoice.resx">
       <DependentUpon>SaleInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,8 +285,11 @@
     <None Include="Properties\DataSources\DAL.DataSet1+SalesRowChangeEvent.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1+SalesRowChangeEventHandler.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.GetSalesTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.InvoiceDetailTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.MasVendidosGetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.SalesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.MasVendidosGetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.EmployeeClass.datasource" />
     <None Include="Properties\DataSources\DAL.InvoiceClass.datasource" />
     <None Include="Properties\DataSources\DAL.InvoiceDetailClass.datasource" />
@@ -277,6 +318,21 @@
       <Project>{427523d8-06fa-4b97-96a1-2b2ca0b69256}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

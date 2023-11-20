@@ -14,6 +14,7 @@ namespace BLL
         private Products1TableAdapter product = null;
         private Products1TableAdapter invoiceProduct = new Products1TableAdapter();
         private SalesTableAdapter invoiceSales = new SalesTableAdapter();
+        private GetSalesTableAdapter getSales = new GetSalesTableAdapter();
         private Products1TableAdapter PRODUCTS
         {
             get
@@ -33,6 +34,19 @@ namespace BLL
                 return invoiceSales;
             }
         }//fin private
+
+        private GetSalesTableAdapter SALESGET
+        {
+            get
+            {
+                if (getSales == null)
+                    getSales = new GetSalesTableAdapter();
+                return getSales;
+            }
+        }//fin private
+
+
+
         public DataTable ListProduct()
         {
             return PRODUCTS.GetDataProductList();

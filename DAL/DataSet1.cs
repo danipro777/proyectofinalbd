@@ -19,6 +19,14 @@ namespace DAL
 
 namespace DAL.DataSet1TableAdapters
 {
+    partial class masVendidoTableAdapter
+    {
+    }
+
+    partial class GetSalesTableAdapter
+    {
+    }
+
     partial class SalesTableAdapter
     {
     }
