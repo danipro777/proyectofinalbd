@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix3">
+      <Tablix Name="Tablix7">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -21,21 +21,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID Sale</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -51,7 +51,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox19">
+                    <Textbox Name="Textbox39">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -65,7 +65,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <rd:DefaultName>Textbox39</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -81,21 +81,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox21">
+                    <Textbox Name="Textbox41">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Sum</Value>
+                              <Value>Cantidad Vendida</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <rd:DefaultName>Textbox41</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -116,21 +116,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID_Sale">
+                    <Textbox Name="Textbox38">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID_Sale.Value</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ID_Sale</rd:DefaultName>
+                      <rd:DefaultName>Textbox38</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -176,21 +176,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TotalSum">
+                    <Textbox Name="CantidadTotal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TotalSum.Value</Value>
+                              <Value>=Fields!CantidadTotal.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TotalSum</rd:DefaultName>
+                      <rd:DefaultName>CantidadTotal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -202,7 +202,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -227,8 +226,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.66542in</Top>
-        <Left>1.37375in</Left>
+        <Top>1.01042in</Top>
+        <Left>1.13542in</Left>
         <Height>0.5in</Height>
         <Width>3in</Width>
         <Style>
@@ -256,7 +255,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5e7bbf7f-41de-448c-93fd-5b14e39e854e</rd:DataSourceID>
+      <rd:DataSourceID>6d06fc78-2621-41ce-8e26-f5ee48af1d97</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -266,27 +265,23 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ID_Sale">
-          <DataField>ID_Sale</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="NombreProducto">
           <DataField>NombreProducto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TotalSum">
-          <DataField>TotalSum</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="CantidadTotal">
+          <DataField>CantidadTotal</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DAL</rd:DataSetName>
         <rd:TableName>DataSet1</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>MasVendidosGet</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethod>masCantidad</rd:ObjectDataSourceSelectMethod>
         <rd:ObjectDataSourceType>DAL.DataSet1, DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>84f71175-68c9-4155-b56a-f5381b641dae</rd:ReportID>
+  <rd:ReportID>02cf6c24-db1e-470f-ac0c-23419e2010e3</rd:ReportID>
 </Report>

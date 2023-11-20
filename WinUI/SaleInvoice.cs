@@ -206,7 +206,8 @@ namespace WinUI
             int IdInvoice = cmbInvoice.SelectedIndex + 1;
             int idProduct = cmbProduct.SelectedIndex + 1;
             int typepay = cmbPaymentType.SelectedIndex + 1;
-            classLogical.SaveSale(fecha, IdInvoice, idProduct, typepay);
+            int cantidad = Convert.ToInt32(textBox1.Text);
+            classLogical.SaveSale(fecha, IdInvoice, idProduct, typepay, cantidad);
             // Obtén el texto seleccionado del ComboBox
             string texto = cmbProduct.SelectedItem.ToString();
 

@@ -64,6 +64,8 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -150,6 +152,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.cmbInvoice);
             this.groupBox2.Controls.Add(this.cmbProduct);
@@ -450,6 +454,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(329, 133);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Cantidad:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(413, 132);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(217, 20);
+            this.textBox1.TabIndex = 8;
+            // 
             // SaleInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,5 +542,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Montos;
         private System.Windows.Forms.Button btnAnularFac;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
     }
 }

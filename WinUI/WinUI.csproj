@@ -162,6 +162,12 @@
     <Compile Include="ReportProducts.Designer.cs">
       <DependentUpon>ReportProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportQuantity.Designer.cs">
+      <DependentUpon>ReportQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaleInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,7 +229,11 @@
     <EmbeddedResource Include="ReportProducts.resx">
       <DependentUpon>ReportProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportQuantity.resx">
+      <DependentUpon>ReportQuantity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportAmount.rdlc" />
+    <EmbeddedResource Include="Reports\ReportCantidad.rdlc" />
     <EmbeddedResource Include="Reports\ReportMasVendidos.rdlc" />
     <EmbeddedResource Include="SaleInvoice.resx">
       <DependentUpon>SaleInvoice.cs</DependentUpon>
@@ -287,9 +297,13 @@
     <None Include="Properties\DataSources\DAL.DataSet1.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.GetSalesTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.InvoiceDetailTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.masCantidadTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.MasVendidosGetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.SalesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.masCantidadTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.MasVendidosGetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\DataSources\DAL.EmployeeClass.datasource" />
     <None Include="Properties\DataSources\DAL.InvoiceClass.datasource" />
     <None Include="Properties\DataSources\DAL.InvoiceDetailClass.datasource" />

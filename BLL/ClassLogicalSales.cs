@@ -52,9 +52,9 @@ namespace BLL
             return PRODUCTS.GetDataProductList();
         }
 
-        public void SaveSale(DateTime fecha, int idFactura, int idProducto, int typepay)
+        public void SaveSale(DateTime fecha, int idFactura, int idProducto, int typepay, int cantidad)
         {
-            invoiceSales.InsertarVenta(fecha, idFactura, idProducto, typepay);
+            invoiceSales.InsertarVenta(fecha, idFactura, idProducto, typepay, cantidad);
         }
 
         //sumar
