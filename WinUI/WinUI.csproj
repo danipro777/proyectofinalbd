@@ -156,6 +156,18 @@
     <Compile Include="ReportAmount.Designer.cs">
       <DependentUpon>ReportAmount.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportFacturaDet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFacturaDet.Designer.cs">
+      <DependentUpon>ReportFacturaDet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProductos.Designer.cs">
+      <DependentUpon>ReportProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +238,12 @@
     <EmbeddedResource Include="ReportAmount.resx">
       <DependentUpon>ReportAmount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportFacturaDet.resx">
+      <DependentUpon>ReportFacturaDet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductos.resx">
+      <DependentUpon>ReportProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportProducts.resx">
       <DependentUpon>ReportProducts.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,7 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportAmount.rdlc" />
     <EmbeddedResource Include="Reports\ReportCantidad.rdlc" />
+    <EmbeddedResource Include="Reports\ReportFactura.rdlc" />
     <EmbeddedResource Include="Reports\ReportMasVendidos.rdlc" />
+    <EmbeddedResource Include="Reports\ReportProducts.rdlc" />
     <EmbeddedResource Include="SaleInvoice.resx">
       <DependentUpon>SaleInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +320,7 @@
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.masCantidadTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.MasVendidosGetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.SalesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DAL.DataSet1TableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.masCantidadTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.MasVendidosGetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DAL.DataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
@@ -347,6 +368,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportQuantity());
+            Application.Run(new ReportFacturaDet());
         }
     }
 }
